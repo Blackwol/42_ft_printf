@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 19:03:59 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/22 19:04:01 by pcardoso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	print_args(const char current_format, va_list arg, int *count)
@@ -30,6 +42,8 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	arg;
 
+	if (format == NULL)
+		return (0);
 	va_start(arg, format);
 	count = 0;
 	while (*format)

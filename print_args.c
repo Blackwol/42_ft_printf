@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_args.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 18:59:50 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/22 19:24:31 by pcardoso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	print_char(va_list arg, int *count)
@@ -62,12 +74,6 @@ void	print_pointer(va_list arg, int *count)
 	char					*result;
 
 	ptr = (unsigned long long int)va_arg(arg, void *);
-	if (ptr == 0)
-	{
-		write(1, "(nil)", 5);
-		*count = *count + 5;
-		return ;
-	}
 	write(1, "0x", 2);
 	*count = *count + 2;
 	result = convert(ptr, 16, 0);
