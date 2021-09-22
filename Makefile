@@ -10,14 +10,14 @@ AR		= ar rc
 
 RM		= rm -f
 
-FLAGS	= -Wall -Wextra -Werror -c
+FLAGS	= -Wall -Wextra -Werror
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
-				$(AR) ${NAME} ${OBJS}
+$(NAME):	$(SRCS) $(OBJS)
+				$(AR) $(NAME) $(OBJS)
 
-$(OBJS):
+$(SRCS):
 				$(CC) $(FLAGS) $(SRCS)
 
 clean:
