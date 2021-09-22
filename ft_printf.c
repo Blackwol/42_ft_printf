@@ -27,7 +27,7 @@ void	print_args(const char current_format, va_list arg, int *count)
 
 int	ft_printf(const char *format, ...)
 {
-	int			count;
+	int		count;
 	va_list	arg;
 
 	va_start(arg, format);

@@ -29,8 +29,8 @@ void	print_string(va_list arg, int *count)
 
 void	print_hexadecimal(va_list arg, int capital_letters, int *count)
 {
-	int		i;
-	char	*ptr;
+	int				i;
+	char			*ptr;
 	unsigned int	unsi_int;
 
 	unsi_int = 0;
@@ -58,8 +58,8 @@ void	print_integer(va_list arg, int *count)
 
 void	print_pointer(va_list arg, int *count)
 {
-	unsigned long long int ptr;
-	char	*result;
+	unsigned long long int	ptr;
+	char					*result;
 
 	ptr = (unsigned long long int)va_arg(arg, void *);
 	if (ptr == 0)

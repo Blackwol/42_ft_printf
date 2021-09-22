@@ -1,11 +1,9 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-// Tirar .h desnecessarios
+
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include <limits.h>
 
 int		ft_printf(const char *format, ...);
 int		ft_strlen(const char *s);
