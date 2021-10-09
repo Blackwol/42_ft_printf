@@ -5,51 +5,40 @@
 #                                                     +:+ +:+         +:+      #
 #    By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/26 15:46:41 by pcardoso          #+#    #+#              #
-#    Updated: 2021/09/26 15:46:43 by pcardoso         ###   ########.fr        #
+#    Created: 2021/09/26 15:47:50 by pcardoso          #+#    #+#              #
+#    Updated: 2021/09/26 15:47:53 by pcardoso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= libftprintf.a
+SRCS += ft_strlen.c ft_strdup.c \
+		   ft_strjoin.c ft_putchar.c ft_putstr.c ft_putnbr.c
 
-LIBFT_DIR	= ./libft
-LIBFT		= $(LIBFT_DIR)/libft.a
+OBJS += ft_strlen.o ft_strdup.o \
+		   ft_strjoin.o ft_putchar.o ft_putstr.o ft_putnbr.o
 
-CC			= gcc
-FLAGS		= -Wall -Wextra -Werror -c
-LIB			= ar rc
-LIB1		= ar -s
-RM			= rm -rf
+NAME	= libft.a
 
-SRCS		= convert.c \
-					print_args2.c \
-					print_args.c \
-					ft_printf.c
+CC		= gcc
 
-OBJS		= convert.o \
-					print_args2.o \
-					print_args.o \
-					ft_printf.o
+AR		= ar rc
+
+RM		= rm -f
+
+FLAGS	= -Wall -Wextra -Werror -c
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS) $(LIBFT)
-			$(LIB)	$(NAME) $(OBJS)
-			$(LIB1) $(NAME)
+$(NAME):	$(OBJS)
+				$(AR) ${NAME} ${OBJS}
+				ar -s ${NAME}
 
 $(OBJS):
-			$(CC) $(FLAGS) $(SRCS)
-
-$(LIBFT):
-			make all -C $(LIBFT_DIR)
-			cp $(LIBFT) $(NAME)
+				$(CC) $(FLAGS) $(SRCS)
 
 clean:
-			make clean -C $(LIBFT_DIR)
-			$(RM) $(OBJS)
+				${RM} ${OBJS}
 
 fclean:		clean
-			make fclean -C $(LIBFT_DIR)
-			$(RM) $(NAME)
+				${RM} ${NAME}
 
-re:			fclean all
+re: 		fclean all

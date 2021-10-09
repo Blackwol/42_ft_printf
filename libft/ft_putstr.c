@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:00:08 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:00:10 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:48:43 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:48:44 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_strlen(const char *s)
+void	ft_putstr(char *s, int *count)
 {
-	int	count;
-
-	count = 0;
-	while (s[count])
-		count++;
-	return (count);
+	write(1, s, ft_strlen(s));
+	*count = *count + ft_strlen(s);
 }

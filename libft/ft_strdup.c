@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:03:39 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:03:41 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:48:51 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:48:53 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *s1)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-		return (1);
-	else
-		return (0);
+	char	*ptr;
+	int		c;
+
+	c = ft_strlen(s1);
+	ptr = malloc(sizeof(char) * (c + 1));
+	if (!(ptr))
+		return (NULL);
+	while (c >= 0)
+	{
+		ptr[c] = (char)s1[c];
+		c--;
+	}
+	return (ptr);
 }

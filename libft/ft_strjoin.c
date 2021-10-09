@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:04:22 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:04:24 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:49:00 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:49:02 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 char	*ft_strjoin_with_char(char *s1, char const s2)
 {
@@ -31,30 +31,3 @@ char	*ft_strjoin_with_char(char *s1, char const s2)
 	free(s1);
 	return (ptr);
 }
-
-// char	*ft_strjoin(char *s1, char const *s2)
-// {
-// 	char	*ptr;
-// 	int		c1;
-// 	int		c2;
-
-// 	ptr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * (sizeof(char)));
-// 	if (!(ptr))
-// 		return (NULL);
-// 	c1 = 0;
-// 	c2 = 0;
-// 	while (s1[c1])
-// 	{
-// 		ptr[c1] = s1[c1];
-// 		c1++;
-// 	}
-// 	while (s2[c2])
-// 	{
-// 		ptr[c1] = s2[c2];
-// 		c1++;
-// 		c2++;
-// 	}
-// 	ptr[c1] = '\0';
-//	free(s1);
-// 	return (ptr);
-// }

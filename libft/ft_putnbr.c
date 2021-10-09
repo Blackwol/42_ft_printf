@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:03:11 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:03:14 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:48:31 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:48:33 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	lenint(long x)
 {

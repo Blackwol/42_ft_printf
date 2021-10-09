@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:03:29 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:03:31 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:48:01 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:48:04 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_putchar(char c, int *count)
 {

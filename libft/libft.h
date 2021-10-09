@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcardoso </var/mail/pcardoso>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 19:05:00 by pcardoso          #+#    #+#             */
-/*   Updated: 2021/09/22 19:05:01 by pcardoso         ###   ########.fr       */
+/*   Created: 2021/09/26 15:49:15 by pcardoso          #+#    #+#             */
+/*   Updated: 2021/09/26 15:49:16 by pcardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-char	*ft_strdup(const char *s1)
-{
-	char	*ptr;
-	int		c;
+# include <unistd.h>
+# include <stdlib.h>
 
-	c = ft_strlen(s1);
-	ptr = malloc(sizeof(char) * (c + 1));
-	if (!(ptr))
-		return (NULL);
-	while (c >= 0)
-	{
-		ptr[c] = (char)s1[c];
-		c--;
-	}
-	return (ptr);
-}
+int		ft_strlen(const char *s);
+void	ft_putchar(char c, int *count);
+void	ft_putnbr(int n, int *count);
+void	ft_putstr(char *s, int *count);
+char	*ft_strjoin_with_char(char *s1, char const s2);
+char	*ft_strdup(const char *s1);
+void	ft_putunbr(long n, int *c);
+
+#endif
